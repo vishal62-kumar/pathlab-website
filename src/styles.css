@@ -1,0 +1,84 @@
+/* Custom styles and micro-interactions for Aarogyam landing page */
+
+:root {
+  --brand-primary: #be123c;
+  --brand-dark: #881337;
+  --brand-accent: #f43f5e;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Filter pills active state */
+.filter-btn {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  white-space: nowrap;
+}
+
+.filter-btn:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.filter-btn.active-filter {
+  background-color: #be123c;
+  color: #ffffff;
+  border-color: #f43f5e;
+  box-shadow: 0 4px 12px rgba(190, 18, 60, 0.35);
+}
+
+/* Smooth accordion styling */
+.accordion-content {
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease-in-out;
+}
+
+.accordion-content.collapsed {
+  display: none;
+}
+
+/* Highlight matching search terms */
+.highlight-match {
+  background-color: #fef08a !important;
+  color: #854d0e !important;
+  padding: 1px 4px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+/* Glassmorphism effects */
+.glass-header {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Animation utilities */
+@keyframes pulseSubtle {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.animate-subtle {
+  animation: pulseSubtle 3s infinite ease-in-out;
+}
